@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/GitHub/CLionProjects/DataStructure/Chapter2/SingleLinkList/SingleLinkList_1.c
+stdio.h
+-
+stdlib.h
+-
+
