@@ -1,8 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/SingleLinkList_1.dir/SingleLinkList/SingleLinkList_1.c.obj"
+  "CMakeFiles/SingleLinkList_1.dir/SingleLinkList/SingleLinkList_1.c.o"
   "SingleLinkList_1.pdb"
   "SingleLinkList_1.exe"
-  "SingleLinkList_1.exe.manifest"
   "libSingleLinkList_1.dll.a"
 )
 

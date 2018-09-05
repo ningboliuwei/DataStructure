@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-C:/GitHub/CLionProjects/DataStructure/Chapter2/SingleLinkList/SingleLinkList_1.c
+/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter2/SingleLinkList/SingleLinkList_1.c
 stdio.h
 -
 stdlib.h

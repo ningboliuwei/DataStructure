@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/GitHub/CLionProjects/DataStructure/Chapter2/SingleLinkList/SingleLinkList_1.c" "C:/GitHub/CLionProjects/DataStructure/Chapter2/cmake-build-debug/CMakeFiles/SingleLinkList_1.dir/SingleLinkList/SingleLinkList_1.c.obj"
+  "/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter2/SingleLinkList/SingleLinkList_1.c" "/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter2/cmake-build-debug/CMakeFiles/SingleLinkList_1.dir/SingleLinkList/SingleLinkList_1.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
