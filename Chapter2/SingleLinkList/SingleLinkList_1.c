@@ -124,6 +124,28 @@ int SearchListByElement_L(LinkList linkList, int element) {
     }
 }
 
+int InsList_L(LinkList linkList, int pos, int newElement) {
+    Node *p = linkList;
+    int index = 0;
+
+    // PPT 上为 while (p ...  到底哪个是正确的？
+    while (p->next != NULL && index < pos - 1) {
+        p = p->next;
+        index++;
+    }
+
+    if (p == NULL || index > pos - 1) {
+        return 0;
+    } else {
+        Node *s = (Node *) malloc(sizeof(Node));
+        s->data = newElement;
+        s->next = p->next;
+        p->next = s;
+
+        return 1;
+    }
+}
+
 // 删除链表中指定位置的元素
 int DelList_L(LinkList linkList, int pos) {
     Node *p = linkList;
@@ -134,8 +156,8 @@ int DelList_L(LinkList linkList, int pos) {
         index++;
     }
 
-    if (p->next == NULL || index > pos - 1) {
-        return -1;
+    if (p || index > pos - 1) {
+        return 0;
     } else {
         Node *q = p->next;
         p->next = q->next;
@@ -201,14 +223,28 @@ int main() {
 //    printf("\n");
 //    printf("The found position is %d", pos);
 
+//    int pos;
+//    printf("\n");
+//    printf("Input the position of element you want to delete");
+//    scanf("%d", &pos);
+//    int q = DelList_L2(linkList, pos);
+//
+//    printf("%d\n", q);
+//    printf("The elements of the linklist after deletion:");
+//    ShowList_L(linkList);
+//    printf("\n");
+
+    int newElement;
     int pos;
     printf("\n");
-    printf("Input the position of element you want to delete");
+    printf("Input the new element.");
+    scanf("%d", &newElement);
+    printf("Input the position you want to insert.");
     scanf("%d", &pos);
-    int q = DelList_L2(linkList, pos);
+    int q = InsList_L(linkList, pos, newElement);
 
     printf("%d\n", q);
-    printf("The elements of the linklist after deletion:");
+    printf("The elements of the linklist after insertion:");
     ShowList_L(linkList);
     printf("\n");
 
