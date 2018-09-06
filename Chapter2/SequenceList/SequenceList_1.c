@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX_LENGTH 10
+#define MAX_LENGTH 20
 
 typedef struct {
     int data[MAX_LENGTH];
@@ -112,6 +112,18 @@ void CommonElements(SeqList *list1, SeqList *list2, SeqList *resultList) {
     }
 }
 
+void CommonElementsUsingFunction(SeqList *list1, SeqList *list2, SeqList *resultList) {
+    int i = 0;
+    int j = 0;
+
+    for (i = 0; i <= list1->last; i++) {
+
+        if (SearchListByElement_Seq(list2, list1->data[i]) != -1) {
+            InsList_Seq(resultList, resultList->last + 2, list1->data[i]);
+        }
+    }
+}
+
 void InputElements(SeqList *list) {
     int data = 0;
 
@@ -135,7 +147,6 @@ void InputElements(SeqList *list) {
 
 
 void GetCommonElements() {
-    int data;
     SeqList *list1 = CreateList_Seq();
     SeqList *list2 = CreateList_Seq();
     SeqList *resultList = CreateList_Seq();
@@ -143,10 +154,62 @@ void GetCommonElements() {
     InputElements(list1);
     InputElements(list2);
 
-    CommonElements(list1, list2, resultList);
+    CommonElementsUsingFunction(list1, list2, resultList);
 
     printf("\n");
-    printf("The common elements");
+    printf("The common elements: ");
+    ShowList_Seq(resultList);
+    printf("\n");
+}
+
+int MergeList(SeqList *list1, SeqList *list2, SeqList *resultList) {
+    int i = 0;
+    int j = 0;
+
+    while (i <= list1->last) {
+        while (j <= list2->last) {
+            if (list1->data[i] < list2->data[j]) {
+                InsList_Seq(resultList, resultList->last + 2, list1->data[i]);
+                i++;
+            } else {
+                InsList_Seq(resultList, resultList->last + 2, list2->data[j]);
+                j++;
+            }
+
+            if (i > list1->last || j > list2->last){
+                break;
+            }
+        }
+        break;
+    }
+
+    if (i > list1->last) {
+        while (j <= list2->last) {
+            InsList_Seq(resultList, resultList->last + 2, list2->data[j]);
+            j++;
+        }
+    }
+
+    if (j > list2->last) {
+        while (i <= list1->last) {
+            InsList_Seq(resultList, resultList->last + 2, list1->data[i]);
+            i++;
+        }
+    }
+}
+
+void GetMergedList() {
+    SeqList *list1 = CreateList_Seq();
+    SeqList *list2 = CreateList_Seq();
+    SeqList *resultList = CreateList_Seq();
+
+    InputElements(list1);
+    InputElements(list2);
+
+    MergeList(list1, list2, resultList);
+
+    printf("\n");
+    printf("The merged list: ");
     ShowList_Seq(resultList);
     printf("\n");
 }
@@ -208,5 +271,6 @@ int main() {
 //    printf("\n");
 //    printf("The found position is %d", pos);
 
-    GetCommonElements();
+//    GetCommonElements();
+    GetMergedList();
 }
