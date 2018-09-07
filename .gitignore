@@ -28,6 +28,8 @@ obj/
 _ReSharper*/
 [Tt]est[Rr]esult*
 .vs/
+*/cmake-build-debug/*
 #Nuget packages folder
 packages/
-cmake-build-debug/
+
+*/cmake-build-debug/*
