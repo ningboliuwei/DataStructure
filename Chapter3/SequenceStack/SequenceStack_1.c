@@ -44,8 +44,6 @@ int ReadTop(SeqStack s, int *x) {
 //
 //// 若栈不空，则删除st的栈顶元素，用x返回其值，
 //// 并返回1；否则返回0
-
-
 int Pop(SeqStack *s, int *x) {
     if (IsEmpty(*s) == 1) {
         return 0;
@@ -79,7 +77,7 @@ int ShowStack(SeqStack s) {
 }
 
 int main() {
-    SeqStack *s = (SeqStack *) malloc(sizeof(SeqStack));
+    SeqStack *s = (SeqStack *) malloc(sizeof(struct StackNode));
     InitStack(s);
 
     Push(s, 1);

@@ -123,6 +123,46 @@ SequenceStack_1/fast:
 	$(MAKE) -f CMakeFiles/SequenceStack_1.dir/build.make CMakeFiles/SequenceStack_1.dir/build
 .PHONY : SequenceStack_1/fast
 
+#=============================================================================
+# Target rules for targets named LinkStack_1
+
+# Build rule for target.
+LinkStack_1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LinkStack_1
+.PHONY : LinkStack_1
+
+# fast build rule for target.
+LinkStack_1/fast:
+	$(MAKE) -f CMakeFiles/LinkStack_1.dir/build.make CMakeFiles/LinkStack_1.dir/build
+.PHONY : LinkStack_1/fast
+
+LinkStack/LinkStack_1.o: LinkStack/LinkStack_1.c.o
+
+.PHONY : LinkStack/LinkStack_1.o
+
+# target to build an object file
+LinkStack/LinkStack_1.c.o:
+	$(MAKE) -f CMakeFiles/LinkStack_1.dir/build.make CMakeFiles/LinkStack_1.dir/LinkStack/LinkStack_1.c.o
+.PHONY : LinkStack/LinkStack_1.c.o
+
+LinkStack/LinkStack_1.i: LinkStack/LinkStack_1.c.i
+
+.PHONY : LinkStack/LinkStack_1.i
+
+# target to preprocess a source file
+LinkStack/LinkStack_1.c.i:
+	$(MAKE) -f CMakeFiles/LinkStack_1.dir/build.make CMakeFiles/LinkStack_1.dir/LinkStack/LinkStack_1.c.i
+.PHONY : LinkStack/LinkStack_1.c.i
+
+LinkStack/LinkStack_1.s: LinkStack/LinkStack_1.c.s
+
+.PHONY : LinkStack/LinkStack_1.s
+
+# target to generate assembly for a file
+LinkStack/LinkStack_1.c.s:
+	$(MAKE) -f CMakeFiles/LinkStack_1.dir/build.make CMakeFiles/LinkStack_1.dir/LinkStack/LinkStack_1.c.s
+.PHONY : LinkStack/LinkStack_1.c.s
+
 SequenceStack/SequenceStack_1.o: SequenceStack/SequenceStack_1.c.o
 
 .PHONY : SequenceStack/SequenceStack_1.o
@@ -159,6 +199,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... SequenceStack_1"
 	@echo "... rebuild_cache"
+	@echo "... LinkStack_1"
+	@echo "... LinkStack/LinkStack_1.o"
+	@echo "... LinkStack/LinkStack_1.i"
+	@echo "... LinkStack/LinkStack_1.s"
 	@echo "... SequenceStack/SequenceStack_1.o"
 	@echo "... SequenceStack/SequenceStack_1.i"
 	@echo "... SequenceStack/SequenceStack_1.s"
