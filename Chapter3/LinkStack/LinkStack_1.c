@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 typedef struct StackNodeStruct {
     int data;
@@ -50,6 +51,12 @@ int Pop(LinkStack *stack, int *x) {
     return 1;
 }
 
+int IsEmptyStack(LinkStack *stack) {
+    if (stack->top == NULL) {
+        return 1;
+    }
+    return 0;
+}
 
 int ShowStack(LinkStack *stack) {
     printf("--------\n");
@@ -66,33 +73,33 @@ int ShowStack(LinkStack *stack) {
 }
 
 int main() {
-    LinkStack *linkStack = (LinkStack *) malloc(sizeof(LinkStack));
+    LinkStack *stack = (LinkStack *) malloc(sizeof(LinkStack));
 
-    InitStack(linkStack);
-    Push(linkStack, 1);
-    Push(linkStack, 2);
-    Push(linkStack, 3);
+    InitStack(stack);
+    Push(stack, 1);
+    Push(stack, 2);
+    Push(stack, 3);
 
     int *x = (int *) malloc(sizeof(int));
-    ReadTop(linkStack, x);
+    ReadTop(stack, x);
     printf("top: %d\n", *x);
 
-    ShowStack(linkStack);
+    ShowStack(stack);
 
-    Pop(linkStack, x);
+    Pop(stack, x);
     printf("Popped: %d\n", *x);
-    Pop(linkStack, x);
+    Pop(stack, x);
     printf("Popped: %d\n", *x);
-    Pop(linkStack, x);
+    Pop(stack, x);
     printf("Popped: %d\n", *x);
 
-    if (ReadTop(linkStack, x)) {
+    if (ReadTop(stack, x)) {
         printf("top: %d\n", *x);
     } else {
         printf("empty stack");
     }
 
-    ShowStack(linkStack);
+    ShowStack(stack);
 
     getchar();
 }

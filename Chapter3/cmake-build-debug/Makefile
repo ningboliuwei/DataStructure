@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named BracketMatching
+
+# Build rule for target.
+BracketMatching: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BracketMatching
+.PHONY : BracketMatching
+
+# fast build rule for target.
+BracketMatching/fast:
+	$(MAKE) -f CMakeFiles/BracketMatching.dir/build.make CMakeFiles/BracketMatching.dir/build
+.PHONY : BracketMatching/fast
+
+#=============================================================================
 # Target rules for targets named SequenceStack_1
 
 # Build rule for target.
@@ -135,6 +148,33 @@ LinkStack_1: cmake_check_build_system
 LinkStack_1/fast:
 	$(MAKE) -f CMakeFiles/LinkStack_1.dir/build.make CMakeFiles/LinkStack_1.dir/build
 .PHONY : LinkStack_1/fast
+
+BracketMatching/BracketMatching.o: BracketMatching/BracketMatching.c.o
+
+.PHONY : BracketMatching/BracketMatching.o
+
+# target to build an object file
+BracketMatching/BracketMatching.c.o:
+	$(MAKE) -f CMakeFiles/BracketMatching.dir/build.make CMakeFiles/BracketMatching.dir/BracketMatching/BracketMatching.c.o
+.PHONY : BracketMatching/BracketMatching.c.o
+
+BracketMatching/BracketMatching.i: BracketMatching/BracketMatching.c.i
+
+.PHONY : BracketMatching/BracketMatching.i
+
+# target to preprocess a source file
+BracketMatching/BracketMatching.c.i:
+	$(MAKE) -f CMakeFiles/BracketMatching.dir/build.make CMakeFiles/BracketMatching.dir/BracketMatching/BracketMatching.c.i
+.PHONY : BracketMatching/BracketMatching.c.i
+
+BracketMatching/BracketMatching.s: BracketMatching/BracketMatching.c.s
+
+.PHONY : BracketMatching/BracketMatching.s
+
+# target to generate assembly for a file
+BracketMatching/BracketMatching.c.s:
+	$(MAKE) -f CMakeFiles/BracketMatching.dir/build.make CMakeFiles/BracketMatching.dir/BracketMatching/BracketMatching.c.s
+.PHONY : BracketMatching/BracketMatching.c.s
 
 LinkStack/LinkStack_1.o: LinkStack/LinkStack_1.c.o
 
@@ -197,9 +237,13 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... BracketMatching"
 	@echo "... SequenceStack_1"
 	@echo "... rebuild_cache"
 	@echo "... LinkStack_1"
+	@echo "... BracketMatching/BracketMatching.o"
+	@echo "... BracketMatching/BracketMatching.i"
+	@echo "... BracketMatching/BracketMatching.s"
 	@echo "... LinkStack/LinkStack_1.o"
 	@echo "... LinkStack/LinkStack_1.i"
 	@echo "... LinkStack/LinkStack_1.s"

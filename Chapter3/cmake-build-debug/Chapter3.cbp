@@ -27,6 +27,44 @@
 					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="BracketMatching">
+				<Option output="/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake-build-debug/BracketMatching.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="\mingw64\include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake-build-debug/Makefile&quot;  VERBOSE=1 BracketMatching"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BracketMatching/fast">
+				<Option output="/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake-build-debug/BracketMatching.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="\mingw64\include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake-build-debug/Makefile&quot;  VERBOSE=1 BracketMatching/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="SequenceStack_1">
 				<Option output="/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake-build-debug/SequenceStack_1.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake-build-debug"/>
@@ -114,6 +152,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/BracketMatching/BracketMatching.c">
+			<Option target="BracketMatching"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/LinkStack/LinkStack_1.c">
 			<Option target="LinkStack_1"/>
 		</Unit>
