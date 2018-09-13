@@ -59,7 +59,7 @@ int IsEmptyStack(LinkStack *stack) {
 }
 
 int ShowStack(LinkStack *stack) {
-    printf("--------\n");
+    printf("\n--------\n");
     StackNode *node;
     node = stack->top;
 
@@ -69,7 +69,7 @@ int ShowStack(LinkStack *stack) {
         node = node->next;
     }
 
-    printf("--------\n");
+    printf("\n--------\n");
 }
 
 int main() {

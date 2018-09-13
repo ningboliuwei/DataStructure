@@ -1,1 +1,0 @@
-/usr/bin/cc  -g  -Wl,--enable-auto-import CMakeFiles/Chapter3.dir/main.c.o  -o Chapter3.exe -Wl,--out-implib,libChapter3.dll.a -Wl,--major-image-version,0,--minor-image-version,0  
