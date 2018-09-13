@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake.exe -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake.exe -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named BracketMatching
+# Target rules for targets named LinkStack_1
 
 # Build rule for target.
-BracketMatching: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 BracketMatching
-.PHONY : BracketMatching
+LinkStack_1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LinkStack_1
+.PHONY : LinkStack_1
 
 # fast build rule for target.
-BracketMatching/fast:
-	$(MAKE) -f CMakeFiles/BracketMatching.dir/build.make CMakeFiles/BracketMatching.dir/build
-.PHONY : BracketMatching/fast
+LinkStack_1/fast:
+	$(MAKE) -f CMakeFiles/LinkStack_1.dir/build.make CMakeFiles/LinkStack_1.dir/build
+.PHONY : LinkStack_1/fast
 
 #=============================================================================
 # Target rules for targets named SequenceStack_1
@@ -137,17 +137,69 @@ SequenceStack_1/fast:
 .PHONY : SequenceStack_1/fast
 
 #=============================================================================
-# Target rules for targets named LinkStack_1
+# Target rules for targets named NumberConvertion_1
 
 # Build rule for target.
-LinkStack_1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 LinkStack_1
-.PHONY : LinkStack_1
+NumberConvertion_1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NumberConvertion_1
+.PHONY : NumberConvertion_1
 
 # fast build rule for target.
-LinkStack_1/fast:
-	$(MAKE) -f CMakeFiles/LinkStack_1.dir/build.make CMakeFiles/LinkStack_1.dir/build
-.PHONY : LinkStack_1/fast
+NumberConvertion_1/fast:
+	$(MAKE) -f CMakeFiles/NumberConvertion_1.dir/build.make CMakeFiles/NumberConvertion_1.dir/build
+.PHONY : NumberConvertion_1/fast
+
+#=============================================================================
+# Target rules for targets named ExpressionCaculation_1
+
+# Build rule for target.
+ExpressionCaculation_1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExpressionCaculation_1
+.PHONY : ExpressionCaculation_1
+
+# fast build rule for target.
+ExpressionCaculation_1/fast:
+	$(MAKE) -f CMakeFiles/ExpressionCaculation_1.dir/build.make CMakeFiles/ExpressionCaculation_1.dir/build
+.PHONY : ExpressionCaculation_1/fast
+
+#=============================================================================
+# Target rules for targets named BracketMatching
+
+# Build rule for target.
+BracketMatching: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BracketMatching
+.PHONY : BracketMatching
+
+# fast build rule for target.
+BracketMatching/fast:
+	$(MAKE) -f CMakeFiles/BracketMatching.dir/build.make CMakeFiles/BracketMatching.dir/build
+.PHONY : BracketMatching/fast
+
+#=============================================================================
+# Target rules for targets named LineEdit
+
+# Build rule for target.
+LineEdit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LineEdit
+.PHONY : LineEdit
+
+# fast build rule for target.
+LineEdit/fast:
+	$(MAKE) -f CMakeFiles/LineEdit.dir/build.make CMakeFiles/LineEdit.dir/build
+.PHONY : LineEdit/fast
+
+#=============================================================================
+# Target rules for targets named InfixExpression
+
+# Build rule for target.
+InfixExpression: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 InfixExpression
+.PHONY : InfixExpression
+
+# fast build rule for target.
+InfixExpression/fast:
+	$(MAKE) -f CMakeFiles/InfixExpression.dir/build.make CMakeFiles/InfixExpression.dir/build
+.PHONY : InfixExpression/fast
 
 BracketMatching/BracketMatching.o: BracketMatching/BracketMatching.c.o
 
@@ -176,6 +228,90 @@ BracketMatching/BracketMatching.c.s:
 	$(MAKE) -f CMakeFiles/BracketMatching.dir/build.make CMakeFiles/BracketMatching.dir/BracketMatching/BracketMatching.c.s
 .PHONY : BracketMatching/BracketMatching.c.s
 
+ExpressionCaculation/ExpressionCaculation_1.o: ExpressionCaculation/ExpressionCaculation_1.c.o
+
+.PHONY : ExpressionCaculation/ExpressionCaculation_1.o
+
+# target to build an object file
+ExpressionCaculation/ExpressionCaculation_1.c.o:
+	$(MAKE) -f CMakeFiles/ExpressionCaculation_1.dir/build.make CMakeFiles/ExpressionCaculation_1.dir/ExpressionCaculation/ExpressionCaculation_1.c.o
+.PHONY : ExpressionCaculation/ExpressionCaculation_1.c.o
+
+ExpressionCaculation/ExpressionCaculation_1.i: ExpressionCaculation/ExpressionCaculation_1.c.i
+
+.PHONY : ExpressionCaculation/ExpressionCaculation_1.i
+
+# target to preprocess a source file
+ExpressionCaculation/ExpressionCaculation_1.c.i:
+	$(MAKE) -f CMakeFiles/ExpressionCaculation_1.dir/build.make CMakeFiles/ExpressionCaculation_1.dir/ExpressionCaculation/ExpressionCaculation_1.c.i
+.PHONY : ExpressionCaculation/ExpressionCaculation_1.c.i
+
+ExpressionCaculation/ExpressionCaculation_1.s: ExpressionCaculation/ExpressionCaculation_1.c.s
+
+.PHONY : ExpressionCaculation/ExpressionCaculation_1.s
+
+# target to generate assembly for a file
+ExpressionCaculation/ExpressionCaculation_1.c.s:
+	$(MAKE) -f CMakeFiles/ExpressionCaculation_1.dir/build.make CMakeFiles/ExpressionCaculation_1.dir/ExpressionCaculation/ExpressionCaculation_1.c.s
+.PHONY : ExpressionCaculation/ExpressionCaculation_1.c.s
+
+ExpressionCaculation/InfixExpression.o: ExpressionCaculation/InfixExpression.c.o
+
+.PHONY : ExpressionCaculation/InfixExpression.o
+
+# target to build an object file
+ExpressionCaculation/InfixExpression.c.o:
+	$(MAKE) -f CMakeFiles/InfixExpression.dir/build.make CMakeFiles/InfixExpression.dir/ExpressionCaculation/InfixExpression.c.o
+.PHONY : ExpressionCaculation/InfixExpression.c.o
+
+ExpressionCaculation/InfixExpression.i: ExpressionCaculation/InfixExpression.c.i
+
+.PHONY : ExpressionCaculation/InfixExpression.i
+
+# target to preprocess a source file
+ExpressionCaculation/InfixExpression.c.i:
+	$(MAKE) -f CMakeFiles/InfixExpression.dir/build.make CMakeFiles/InfixExpression.dir/ExpressionCaculation/InfixExpression.c.i
+.PHONY : ExpressionCaculation/InfixExpression.c.i
+
+ExpressionCaculation/InfixExpression.s: ExpressionCaculation/InfixExpression.c.s
+
+.PHONY : ExpressionCaculation/InfixExpression.s
+
+# target to generate assembly for a file
+ExpressionCaculation/InfixExpression.c.s:
+	$(MAKE) -f CMakeFiles/InfixExpression.dir/build.make CMakeFiles/InfixExpression.dir/ExpressionCaculation/InfixExpression.c.s
+.PHONY : ExpressionCaculation/InfixExpression.c.s
+
+LineEdit/LineEdit.o: LineEdit/LineEdit.c.o
+
+.PHONY : LineEdit/LineEdit.o
+
+# target to build an object file
+LineEdit/LineEdit.c.o:
+	$(MAKE) -f CMakeFiles/BracketMatching.dir/build.make CMakeFiles/BracketMatching.dir/LineEdit/LineEdit.c.o
+	$(MAKE) -f CMakeFiles/LineEdit.dir/build.make CMakeFiles/LineEdit.dir/LineEdit/LineEdit.c.o
+.PHONY : LineEdit/LineEdit.c.o
+
+LineEdit/LineEdit.i: LineEdit/LineEdit.c.i
+
+.PHONY : LineEdit/LineEdit.i
+
+# target to preprocess a source file
+LineEdit/LineEdit.c.i:
+	$(MAKE) -f CMakeFiles/BracketMatching.dir/build.make CMakeFiles/BracketMatching.dir/LineEdit/LineEdit.c.i
+	$(MAKE) -f CMakeFiles/LineEdit.dir/build.make CMakeFiles/LineEdit.dir/LineEdit/LineEdit.c.i
+.PHONY : LineEdit/LineEdit.c.i
+
+LineEdit/LineEdit.s: LineEdit/LineEdit.c.s
+
+.PHONY : LineEdit/LineEdit.s
+
+# target to generate assembly for a file
+LineEdit/LineEdit.c.s:
+	$(MAKE) -f CMakeFiles/BracketMatching.dir/build.make CMakeFiles/BracketMatching.dir/LineEdit/LineEdit.c.s
+	$(MAKE) -f CMakeFiles/LineEdit.dir/build.make CMakeFiles/LineEdit.dir/LineEdit/LineEdit.c.s
+.PHONY : LineEdit/LineEdit.c.s
+
 LinkStack/LinkStack_1.o: LinkStack/LinkStack_1.c.o
 
 .PHONY : LinkStack/LinkStack_1.o
@@ -202,6 +338,33 @@ LinkStack/LinkStack_1.s: LinkStack/LinkStack_1.c.s
 LinkStack/LinkStack_1.c.s:
 	$(MAKE) -f CMakeFiles/LinkStack_1.dir/build.make CMakeFiles/LinkStack_1.dir/LinkStack/LinkStack_1.c.s
 .PHONY : LinkStack/LinkStack_1.c.s
+
+NumberConvertion/NumberConvertion_1.o: NumberConvertion/NumberConvertion_1.c.o
+
+.PHONY : NumberConvertion/NumberConvertion_1.o
+
+# target to build an object file
+NumberConvertion/NumberConvertion_1.c.o:
+	$(MAKE) -f CMakeFiles/NumberConvertion_1.dir/build.make CMakeFiles/NumberConvertion_1.dir/NumberConvertion/NumberConvertion_1.c.o
+.PHONY : NumberConvertion/NumberConvertion_1.c.o
+
+NumberConvertion/NumberConvertion_1.i: NumberConvertion/NumberConvertion_1.c.i
+
+.PHONY : NumberConvertion/NumberConvertion_1.i
+
+# target to preprocess a source file
+NumberConvertion/NumberConvertion_1.c.i:
+	$(MAKE) -f CMakeFiles/NumberConvertion_1.dir/build.make CMakeFiles/NumberConvertion_1.dir/NumberConvertion/NumberConvertion_1.c.i
+.PHONY : NumberConvertion/NumberConvertion_1.c.i
+
+NumberConvertion/NumberConvertion_1.s: NumberConvertion/NumberConvertion_1.c.s
+
+.PHONY : NumberConvertion/NumberConvertion_1.s
+
+# target to generate assembly for a file
+NumberConvertion/NumberConvertion_1.c.s:
+	$(MAKE) -f CMakeFiles/NumberConvertion_1.dir/build.make CMakeFiles/NumberConvertion_1.dir/NumberConvertion/NumberConvertion_1.c.s
+.PHONY : NumberConvertion/NumberConvertion_1.c.s
 
 SequenceStack/SequenceStack_1.o: SequenceStack/SequenceStack_1.c.o
 
@@ -236,17 +399,33 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
-	@echo "... BracketMatching"
-	@echo "... SequenceStack_1"
 	@echo "... rebuild_cache"
 	@echo "... LinkStack_1"
+	@echo "... edit_cache"
+	@echo "... SequenceStack_1"
+	@echo "... NumberConvertion_1"
+	@echo "... ExpressionCaculation_1"
+	@echo "... BracketMatching"
+	@echo "... LineEdit"
+	@echo "... InfixExpression"
 	@echo "... BracketMatching/BracketMatching.o"
 	@echo "... BracketMatching/BracketMatching.i"
 	@echo "... BracketMatching/BracketMatching.s"
+	@echo "... ExpressionCaculation/ExpressionCaculation_1.o"
+	@echo "... ExpressionCaculation/ExpressionCaculation_1.i"
+	@echo "... ExpressionCaculation/ExpressionCaculation_1.s"
+	@echo "... ExpressionCaculation/InfixExpression.o"
+	@echo "... ExpressionCaculation/InfixExpression.i"
+	@echo "... ExpressionCaculation/InfixExpression.s"
+	@echo "... LineEdit/LineEdit.o"
+	@echo "... LineEdit/LineEdit.i"
+	@echo "... LineEdit/LineEdit.s"
 	@echo "... LinkStack/LinkStack_1.o"
 	@echo "... LinkStack/LinkStack_1.i"
 	@echo "... LinkStack/LinkStack_1.s"
+	@echo "... NumberConvertion/NumberConvertion_1.o"
+	@echo "... NumberConvertion/NumberConvertion_1.i"
+	@echo "... NumberConvertion/NumberConvertion_1.s"
 	@echo "... SequenceStack/SequenceStack_1.o"
 	@echo "... SequenceStack/SequenceStack_1.i"
 	@echo "... SequenceStack/SequenceStack_1.s"

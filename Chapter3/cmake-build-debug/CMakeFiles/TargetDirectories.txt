@@ -1,5 +1,9 @@
-/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake-build-debug/CMakeFiles/edit_cache.dir
-/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake-build-debug/CMakeFiles/BracketMatching.dir
-/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake-build-debug/CMakeFiles/SequenceStack_1.dir
 /cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake-build-debug/CMakeFiles/LinkStack_1.dir
+/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake-build-debug/CMakeFiles/SequenceStack_1.dir
+/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake-build-debug/CMakeFiles/NumberConvertion_1.dir
+/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake-build-debug/CMakeFiles/ExpressionCaculation_1.dir
+/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake-build-debug/CMakeFiles/BracketMatching.dir
+/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake-build-debug/CMakeFiles/LineEdit.dir
+/cygdrive/c/GitHub/CLionProjects/DataStructure/Chapter3/cmake-build-debug/CMakeFiles/InfixExpression.dir
