@@ -82,8 +82,7 @@ int GetOperatorLevel(char op) {
 }
 
 int ShowStack(LinkStack *stack) {
-    StackNode *node;
-    node = stack->top;
+    StackNode *node = stack->top;
 
     while (node != NULL) {
         printf("%c\n", node->data);
@@ -147,7 +146,7 @@ int Infix2Suffix(char *expression, char *result) {
             }
         }
     }
-    
+
     while (!IsEmptyStack(stack)) {
         Pop(stack, topElement);
 
@@ -162,13 +161,68 @@ int Infix2Suffix(char *expression, char *result) {
     return 1;
 }
 
+int Caculate(int x, int y, char op) {
+    if (op == '+') {
+        return x + y;
+    }
+
+    if (op == '-') {
+        return x - y;
+    }
+
+    if (op == '*') {
+        return x * y;
+    }
+
+    if (op == '/') {
+        return x / y;
+    }
+}
+
+int GetValue(char *expression) {
+    LinkStack *numberStack = (LinkStack *) malloc(sizeof(LinkStack));
+    InitStack(numberStack);
+
+    char *topNumber = (char *) malloc(sizeof(char));
+
+    int i = 0;
+
+    for (int i = 0; i < strlen(expression); i++) {
+        char current = expression[i];
+
+        if (current == '\n') {
+            break;
+        }
+
+        if (GetOperatorLevel(current) == -1) {
+            Push(numberStack, current);
+        } else {
+            Pop(numberStack, topNumber);
+            int y = (*topNumber - 48);
+            Pop(numberStack, topNumber);
+            int x = (*topNumber - 48);
+            int temp = Caculate(x, y, current);
+            Push(numberStack, (temp + 48));
+        }
+
+        ShowStack(numberStack);
+    }
+    ReadTop(numberStack, topNumber);
+    return *topNumber - 48;
+}
+
 int main() {
     char *expression = (char *) malloc(sizeof(char) * EXP_MAX_LENGTH);
     char result[EXP_MAX_LENGTH];
+    int caculationResult;
 
+    printf("%d", '1');
     printf("Input a infix expression.\n");
     gets(expression);
     Infix2Suffix(expression, result);
     puts(result);
+    caculationResult = GetValue(result);
+    printf("result is : %d", caculationResult);
+
     getchar();
 }
