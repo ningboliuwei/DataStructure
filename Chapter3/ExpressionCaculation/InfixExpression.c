@@ -103,17 +103,20 @@ int Infix2Suffix(char *expression, char *result) {
     for (int i = 0; i < strlen(expression); i++) {
         char current = expression[i];
 
-        // 非运算符
+        // 非运算符，直接输出
         if (GetOperatorLevel(current) == -1) {
             result[index] = current;
             index++;
         }// 运算符
         else {
+            printf("current: %c\n", current);
             ShowStack(stack);
 
+            //如果op=='('，则直接入栈
             if (current == '(') {
                 Push(stack, current);
-            } else if (current == ')') {
+            }// 如果 op==')'，则依次弹出栈顶直到弹出'('，但'('不输出到后缀表达式
+            else if (current == ')') {
                 do {
                     Pop(stack, topElement);
 
@@ -122,25 +125,29 @@ int Infix2Suffix(char *expression, char *result) {
                         index++;
                     }
                 } while (*topElement != '(');
+            }// 如果栈为空，则直接入栈
+            else if (IsEmptyStack(stack)) {
+                Push(stack, current);
             } else {
                 ReadTop(stack, topElement);
 
+                // 如果op的优先级高于栈顶操作符的优先级，则入栈
                 if (GetOperatorLevel(current) > GetOperatorLevel(*topElement)) {
                     Push(stack, current);
-                } else {
-                    Pop(stack, topElement);
-                    result[index] = *topElement;
-                    index++;
-
-                    ReadTop(stack, topElement);
-
-                    if (GetOperatorLevel(current) > GetOperatorLevel(*topElement)) {
-                        Push(stack, current);
+                }// 如果op的优先级低于或等于栈顶操作符的优先级，则依次弹出栈顶直到op的优先级高于栈顶操作符的优先级（或栈为空），再将op入栈
+                else {
+                    while (ReadTop(stack, topElement) && GetOperatorLevel(current) <= GetOperatorLevel(*topElement)) {
+                        Pop(stack, topElement);
+                        result[index] = *topElement;
+                        index++;
                     }
+
+                    Push(stack, current);
                 }
             }
         }
     }
+    
     while (!IsEmptyStack(stack)) {
         Pop(stack, topElement);
 
